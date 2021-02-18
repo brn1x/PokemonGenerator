@@ -1,21 +1,25 @@
 {
-  "name": "poke-gen",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/app.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.11",
-    "dotenv": "^8.2.0",
-    "ts-node-dev": "^1.1.1",
-    "typescript": "^4.1.5"
-  }
+   "name": "poke-gen",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "express": "^4.17.1",
+      "pg": "^8.5.1",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.31"
+   },
+   "devDependencies": {
+      "@types/express": "^4.17.11",
+      "@types/node": "^8.0.29",
+      "dotenv": "^8.2.0",
+      "ts-node-dev": "^1.1.1",
+      "typescript": "^4.1.5"
+   }
 }
