@@ -2,7 +2,7 @@ import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from 't
 import { Move } from './Move';
 import { Type } from './Type';
 
-@Entity()
+@Entity({ name: 'pokemon' })
 export class Pokemon {
   @PrimaryGeneratedColumn()
   id: number;
@@ -34,11 +34,15 @@ export class Pokemon {
   @Column()
   minDef: number;
 
-  @ManyToMany(type => Type, type => type.pokemon)
+  @ManyToMany(type => Type, type => type.pokemon, {
+    cascade: true
+  })
   @JoinTable()
   types: Type[];
 
-  @ManyToMany(type => Move, move => move.pokemon)
+  @ManyToMany(type => Move, move => move.pokemon, {
+    cascade: true
+  })
   @JoinTable()
   moves: Move[];
 }

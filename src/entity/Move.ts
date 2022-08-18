@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, ManyToMan
 import { Pokemon } from './Pokemon';
 import { Type } from './Type';
 
-@Entity()
+@Entity({ name: 'moves' })
 export class Move {
   @PrimaryGeneratedColumn()
   id: number;
